@@ -27,7 +27,9 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadFoods(): Promise<void> {
-      // TODO LOAD FOODS
+      const { data } = await api.get('/foods');
+
+      setFoods(data);
     }
 
     loadFoods();
@@ -36,8 +38,21 @@ const Dashboard: React.FC = () => {
   async function handleAddFood(
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
+    const { name, description, price, image } = food;
+
+    const newFood = {
+      id: foods.length > 0 ? foods[foods.length - 1].id + 1 : 1,
+      name,
+      description,
+      price,
+      available: true,
+      image,
+    };
+
     try {
-      // TODO ADD A NEW FOOD PLATE TO THE API
+      await api.post('/foods', newFood);
+
+      setFoods([...foods, newFood]);
     } catch (err) {
       console.log(err);
     }
@@ -46,11 +61,34 @@ const Dashboard: React.FC = () => {
   async function handleUpdateFood(
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
-    // TODO UPDATE A FOOD PLATE ON THE API
+    const { name, description, price, image } = food;
+
+    const updatedFood = {
+      id: editingFood.id,
+      name,
+      description,
+      price,
+      available: editingFood.available,
+      image,
+    };
+
+    await api.put(`/foods/${updatedFood.id}`, updatedFood);
+
+    const updatedFoods = foods.map(foodMap =>
+      updatedFood.id === foodMap.id ? updatedFood : foodMap,
+    );
+
+    setFoods(updatedFoods);
   }
 
   async function handleDeleteFood(id: number): Promise<void> {
-    // TODO DELETE A FOOD PLATE FROM THE API
+    await api.delete(`/foods/${id}`);
+
+    const findedFoodIndex = foods.findIndex(foodFind => foodFind.id === id);
+
+    foods.splice(findedFoodIndex, 1);
+
+    setFoods([...foods]);
   }
 
   function toggleModal(): void {
@@ -62,7 +100,9 @@ const Dashboard: React.FC = () => {
   }
 
   function handleEditFood(food: IFoodPlate): void {
-    // TODO SET THE CURRENT EDITING FOOD ID IN THE STATE
+    setEditingFood(food);
+
+    toggleEditModal();
   }
 
   return (
