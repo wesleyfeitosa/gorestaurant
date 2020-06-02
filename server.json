@@ -7,22 +7,6 @@
       "price": "19.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
-    },
-    {
-      "id": 6,
-      "name": "Salada",
-      "description": "Para as magras de fome",
-      "price": "3.2",
-      "available": true,
-      "image": "https://i.pinimg.com/originals/90/cc/9c/90cc9cc7ecf43e17275248c37a382a60.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Acarajé do bom",
-      "description": "Pimenta a vontade",
-      "price": "11.20",
-      "available": true,
-      "image": "https://www.itacareparadise.com.br/wp-content/uploads/2018/07/7-comidas-t%C3%ADpicas-do-litoral-baiano-As-del%C3%ADcias-da-culin%C3%A1ria-nordestina.jpg"
     }
   ]
 }
