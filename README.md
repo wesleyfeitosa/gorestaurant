@@ -3,19 +3,19 @@
 <p align="center">
 
   <a href="LICENSE" style="text-decoration: none">
-    <img alt="License" src="https://img.shields.io/github/license/wesleyfeitosa/gorestaurant?color=C72828" />
+    <img alt="License" src="https://img.shields.io/github/license/wesleyfeitosa/gorestaurant-web?color=C72828" />
   </a>
 
-  <a href="https://github.com/wesleyfeitosa/gorestaurant/issues" style="text-decoration: none">
-    <img alt="Issues" src="https://img.shields.io/github/issues/wesleyfeitosa/gorestaurant?color=C72828" />
+  <a href="https://github.com/wesleyfeitosa/gorestaurant-web/issues" style="text-decoration: none">
+    <img alt="Issues" src="https://img.shields.io/github/issues/wesleyfeitosa/gorestaurant-web?color=C72828" />
   </a>
 
   <a href="#" style="text-decoration: none">
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesleyfeitosa/gorestaurant?color=C72828" />
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesleyfeitosa/gorestaurant-web?color=C72828" />
   </a>
 
-  <a href="https://github.com/wesleyfeitosa/gorestaurant/stargazers" style="text-decoration: none">
-    <img alt="Stars" src="https://img.shields.io/github/stars/wesleyfeitosa/gorestaurant?style=social" />
+  <a href="https://github.com/wesleyfeitosa/gorestaurant-web/stargazers" style="text-decoration: none">
+    <img alt="Stars" src="https://img.shields.io/github/stars/wesleyfeitosa/gorestaurant-web?style=social" />
   </a>
 
 </p>
